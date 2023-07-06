@@ -19,20 +19,35 @@ struct ContactList: View {
     
     @ObservedObject var viewModel: ContactViewModel
     @State private var showAddContact = false
-    @State var showToast = false
+    @State var toastMessage: String? = nil
     
-
+    
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
+        
                 contactListView
-                addContactLink
-                
-                if showToast {
-                    toastView
+                if let msg = toastMessage {
+                    StatusView(toastMessage: msg)
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                                toastMessage = nil
+                            }
+                        }
                 }
+                addContactButton
+            }
+            .navigationBarTitle("Contacts")
+            .navigationDestination(isPresented: $showAddContact) {
+                ContactDetailView(viewModel: viewModel, contact: Contact(), isEdit: false) { isDeleteAction in
+                    assert(!isDeleteAction, "This flaw can't delete contact")
+                    toastMessage = "Successfully added"
+                }
+            }.onAppear {
+                showAddContact = false
             }
         }
+        
     }
     
     private var contactListView: some View {
@@ -40,36 +55,33 @@ struct ContactList: View {
             Text("List up to four people we can call upon your request in the event of an emergency.")
                 .foregroundColor(.black)
             ForEach(viewModel.contacts) { contact in
-                NavigationLink(destination: ContactDetailView(viewModel: viewModel, contact: contact, isEdit: true)) {
+                NavigationLink(destination: {
+                    ContactDetailView(viewModel: viewModel, contact: contact, isEdit: true) { isDeleteAction in
+                        toastMessage = isDeleteAction ? "Successfully deleted": "Successfully edited"
+                    }
+                    
+                }) {
                     ContactRow(contact: contact)
                 }
             }
             .lineSpacing(5)
             .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
         }
-        .navigationBarTitle("Contacts")
+        
     }
     
-    private var toastView: some View {
-        StatusView()
-            .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                    showToast = false
-                }
-            }
-    }
-    
-    private var addContactLink: some View {
-        NavigationLink(destination: {
-            ContactDetailView(viewModel: viewModel, contact: Contact(), isEdit: false)
-        }, label: {
-            Label("Add Contact", systemImage: "plus").modifier(ResponsiveButtonStyleModifier(isValid: true))
-        })
+    private var addContactButton: some View {
+        Button(action: {
+            showAddContact = true
+        }) {
+            Label("Add Contact", systemImage: "plus")
+        }
+        .buttonStyle(ResponsiveButtonStyle(disabled: false))
     }
     
     private func hideToastAfterDelay() {
         DispatchQueue.main.asyncAfter(deadline: .now() + toastDisplayDuration) {
-            showToast = false
+            toastMessage = nil
         }
     }
 }
@@ -92,9 +104,10 @@ struct ContactRow: View {
 }
 
 struct StatusView: View {
+    var toastMessage: String
     var body: some View {
         HStack {
-            Text("Emergency contact created successfully")
+            Text(toastMessage)
                 .font(.headline)
             Image("success")
                 .resizable()
@@ -106,11 +119,9 @@ struct StatusView: View {
                 )
         }
         .padding()
-        .frame(maxWidth: UIScreen.main.bounds.width * 0.75)
+        .frame(maxWidth: UIScreen.main.bounds.width)
         .background(Color.black.opacity(0.7))
         .foregroundColor(.white)
-        .cornerRadius(20)
         .transition(.move(edge: .bottom))
-        .animation(.easeInOut(duration: 0.5))
     }
 }
