@@ -7,42 +7,47 @@
 
 import Foundation
 
+// The ContactViewModel class is responsible for managing the contacts data and providing methods to add, delete, edit, and validate contacts.
 class ContactViewModel: ObservableObject {
     @Published var contacts = [Contact]()
-//    @Published var validationResult = false
        
+    // Add a new contact to the contacts array
     func addContact(firstName: String, lastName: String, phoneNumber: String) {
         let newContact = Contact(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber)
         contacts.append(newContact)
     }
        
+    // Delete a contact from the contacts array
     func deleteContact(_ contact: Contact) {
-        if let index = contacts.firstIndex(where: { $0.id == contact.id }) {
+        if let index = contacts.firstIndex(where: { $0.phoneNumber == contact.phoneNumber }) {
             contacts.remove(at: index)
         }
     }
        
+    // Edit an existing contact in the contacts array
     func editContact(_ contact: Contact) {
-        if let index = contacts.firstIndex(where: { $0.id == contact.id }) {
+        if let index = contacts.firstIndex(where: { $0.phoneNumber == contact.phoneNumber }) {
             contacts[index] = contact
         }
     }
     
+    // Save a contact by either editing an existing contact or adding a new contact
     func saveContact(_ contact: Contact) {
-        if let _ = self.contacts.first(where: { $0.id == contact.id }) {
+        if let _ = self.contacts.first(where: { $0.phoneNumber == contact.phoneNumber }) {
             self.editContact(contact)
         } else {
             self.addContact(firstName: contact.firstName, lastName: contact.lastName, phoneNumber: contact.phoneNumber)
         }
     }
     
+    // Check if a contact is valid by ensuring that the first name, last name, and phone number are not empty and the phone number matches a specific pattern
     func isvalidContact(_ contact: Contact) -> Bool {
         let isValid = !contact.firstName.isEmpty && !contact.lastName.isEmpty
         && isValidPhoneNumber(contact.phoneNumber)
-//        self.validationResult = isValid
         return isValid
     }
 
+    // Check if a phone number matches a specific pattern using regular expressions
     private func isValidPhoneNumber(_ phoneNumber: String) -> Bool {
         let phoneNumberPattern = "^\\(\\d{3}\\) ?\\d{3}-\\d{4}$"
         do {

@@ -3,4 +3,102 @@
    uuid = "272B04C6-D5A5-4D2C-906C-9E587925DE88"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41A8EBDD-73A6-4702-9ECB-D83B96C79B31"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ContentViewTests/ContentViewTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "testDeleteContact()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "41A8EBDD-73A6-4702-9ECB-D83B96C79B31 - e60108e72a6329ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ContentViewTests.ContactViewModelTests.testDeleteContact() -&gt; ()"
+                  moduleName = "ContentViewTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luiza/Desktop/ContentView/ContentViewTests/ContentViewTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "640">
+               </Location>
+               <Location
+                  uuid = "41A8EBDD-73A6-4702-9ECB-D83B96C79B31 - e60108e72a6329ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ContentViewTests.ContactViewModelTests.testDeleteContact() -&gt; ()"
+                  moduleName = "ContentViewTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luiza/Desktop/ContentView/ContentViewTests/ContentViewTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "652">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A6C110F5-99C2-458F-A5E8-A668E1930E79"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ContentView/ContactViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "deleteContact(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A6C110F5-99C2-458F-A5E8-A668E1930E79 - ac9d72fa79cf024b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ContentView.ContactViewModel.deleteContact(ContentView.Contact) -&gt; ()"
+                  moduleName = "ContentView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luiza/Desktop/ContentView/ContentView/ContactViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "320">
+               </Location>
+               <Location
+                  uuid = "A6C110F5-99C2-458F-A5E8-A668E1930E79 - ac9d72fa79cf024b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ContentView.ContactViewModel.deleteContact(ContentView.Contact) -&gt; ()"
+                  moduleName = "ContentView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luiza/Desktop/ContentView/ContentView/ContactViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "220">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

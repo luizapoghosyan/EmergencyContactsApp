@@ -11,7 +11,7 @@
 		25C0E8622A53715A00E1AB37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0E8612A53715A00E1AB37 /* ContentView.swift */; };
 		25C0E8642A53715C00E1AB37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25C0E8632A53715C00E1AB37 /* Assets.xcassets */; };
 		25C0E8672A53715C00E1AB37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25C0E8662A53715C00E1AB37 /* Preview Assets.xcassets */; };
-		25C0E8712A53715C00E1AB37 /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0E8702A53715C00E1AB37 /* ContentViewTests.swift */; };
+		25C0E8712A53715C00E1AB37 /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0E8702A53715C00E1AB37 /* ContactViewModel.swift */; };
 		25C0E87B2A53715C00E1AB37 /* ContentViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0E87A2A53715C00E1AB37 /* ContentViewUITests.swift */; };
 		25C0E87D2A53715C00E1AB37 /* ContentViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0E87C2A53715C00E1AB37 /* ContentViewUITestsLaunchTests.swift */; };
 		25C0E88A2A5371AE00E1AB37 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0E8892A5371AE00E1AB37 /* Contact.swift */; };
@@ -20,6 +20,7 @@
 		25C0E8902A5372F500E1AB37 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0E88F2A5372F500E1AB37 /* ContactDetailView.swift */; };
 		25C0E8922A562B5B00E1AB37 /* UIKitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0E8912A562B5B00E1AB37 /* UIKitTextField.swift */; };
 		25C0E8942A56D9E500E1AB37 /* ResponsiveButtonStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0E8932A56D9E500E1AB37 /* ResponsiveButtonStyleModifier.swift */; };
+		25C0E8962A57678900E1AB37 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0E8952A57678900E1AB37 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +47,7 @@
 		25C0E8632A53715C00E1AB37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25C0E8662A53715C00E1AB37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		25C0E86C2A53715C00E1AB37 /* ContentViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContentViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		25C0E8702A53715C00E1AB37 /* ContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTests.swift; sourceTree = "<group>"; };
+		25C0E8702A53715C00E1AB37 /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
 		25C0E8762A53715C00E1AB37 /* ContentViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContentViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C0E87A2A53715C00E1AB37 /* ContentViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewUITests.swift; sourceTree = "<group>"; };
 		25C0E87C2A53715C00E1AB37 /* ContentViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		25C0E88F2A5372F500E1AB37 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 		25C0E8912A562B5B00E1AB37 /* UIKitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitTextField.swift; sourceTree = "<group>"; };
 		25C0E8932A56D9E500E1AB37 /* ResponsiveButtonStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsiveButtonStyleModifier.swift; sourceTree = "<group>"; };
+		25C0E8952A57678900E1AB37 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +133,8 @@
 		25C0E86F2A53715C00E1AB37 /* ContentViewTests */ = {
 			isa = PBXGroup;
 			children = (
-				25C0E8702A53715C00E1AB37 /* ContentViewTests.swift */,
+				25C0E8702A53715C00E1AB37 /* ContactViewModel.swift */,
+				25C0E8952A57678900E1AB37 /* Contact.swift */,
 			);
 			path = ContentViewTests;
 			sourceTree = "<group>";
@@ -290,7 +293,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25C0E8712A53715C00E1AB37 /* ContentViewTests.swift in Sources */,
+				25C0E8962A57678900E1AB37 /* Contact.swift in Sources */,
+				25C0E8712A53715C00E1AB37 /* ContactViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

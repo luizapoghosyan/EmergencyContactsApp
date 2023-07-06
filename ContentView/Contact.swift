@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct Contact: Identifiable {
-    let id = UUID()
+class Contact: Identifiable {
     var firstName: String
     var lastName: String
     var phoneNumber: String
@@ -22,11 +21,5 @@ struct Contact: Identifiable {
         self.lastName = lastName
         self.phoneNumber = phoneNumber
     }
-    
-//    init(instance: Contact) {
-//        self.firstName = instance.firstName
-//        self.lastName = instance.lastName
-//        self.phoneNumber = instance.phoneNumber
-//    }
 }
 

@@ -31,10 +31,11 @@ struct ContactList: View {
                 if showToast {
                     toastView
                 }
-            }
+            }.background(Color(red: 235/255, green: 0/255, blue: 0/255))
         }
     }
     
+    // The contactListView displays the list of contacts
     private var contactListView: some View {
         Form {
             Text("List up to four people we can call upon your request in the event of an emergency.")
@@ -50,6 +51,7 @@ struct ContactList: View {
         .navigationBarTitle("Contacts")
     }
     
+    // The toastView displays a status message at the bottom of the screen.
     private var toastView: some View {
         StatusView()
             .onAppear {
@@ -59,6 +61,7 @@ struct ContactList: View {
             }
     }
     
+    // The addContactLink is a navigation link that takes the user to the ContactDetailView to add a new contact.
     private var addContactLink: some View {
         NavigationLink(destination: {
             ContactDetailView(viewModel: viewModel, contact: Contact(), isEdit: false)
@@ -67,6 +70,7 @@ struct ContactList: View {
         })
     }
     
+    // The hideToastAfterDelay function hides the toast message after a specified delay.
     private func hideToastAfterDelay() {
         DispatchQueue.main.asyncAfter(deadline: .now() + toastDisplayDuration) {
             showToast = false
@@ -74,6 +78,7 @@ struct ContactList: View {
     }
 }
 
+// The ContactRow view displays a single contact in the contactListView.
 struct ContactRow: View {
     let contact: Contact
     
@@ -91,6 +96,7 @@ struct ContactRow: View {
     }
 }
 
+// The StatusView displays a status message at the bottom of the screen.
 struct StatusView: View {
     var body: some View {
         HStack {
