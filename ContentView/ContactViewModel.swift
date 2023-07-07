@@ -19,21 +19,21 @@ class ContactViewModel: ObservableObject {
        
     // Delete a contact from the contacts array
     func deleteContact(_ contact: Contact) {
-        if let index = contacts.firstIndex(where: { $0.phoneNumber == contact.phoneNumber }) {
+        if let index = contacts.firstIndex(where: { $0.id == contact.id }) {
             contacts.remove(at: index)
         }
     }
        
     // Edit an existing contact in the contacts array
     func editContact(_ contact: Contact) {
-        if let index = contacts.firstIndex(where: { $0.phoneNumber == contact.phoneNumber }) {
+        if let index = contacts.firstIndex(where: { $0.id == contact.id }) {
             contacts[index] = contact
         }
     }
     
     // Save a contact by either editing an existing contact or adding a new contact
     func saveContact(_ contact: Contact) {
-        if let _ = self.contacts.first(where: { $0.phoneNumber == contact.phoneNumber }) {
+        if let _ = self.contacts.first(where: { $0.id == contact.id }) {
             self.editContact(contact)
         } else {
             self.addContact(firstName: contact.firstName, lastName: contact.lastName, phoneNumber: contact.phoneNumber)

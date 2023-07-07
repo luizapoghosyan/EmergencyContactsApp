@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+// This view represents the detail view for a contact
 struct ContactDetailView: View {
     @ObservedObject var viewModel: ContactViewModel
     @Environment(\.presentationMode) var presentationMode
@@ -30,10 +31,12 @@ struct ContactDetailView: View {
                 }
             }
             
+            // Save button
             SaveButtonView(disabled: !viewModel.isvalidContact(contact)) {
                 viewModel.saveContact(contact)
                 emulateLoading(isDeleteAction: false)
             }
+            // Delete button (only if in edit mode)
             if isEdit {
                 DeleteButtonView() {
                     viewModel.deleteContact(contact)
@@ -43,6 +46,7 @@ struct ContactDetailView: View {
         }
     }
     
+    // Function to show a loading spinner for a while
     func emulateLoading(isDeleteAction: Bool) {
         showLoading = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
@@ -56,6 +60,7 @@ struct ContactDetailView: View {
         NavigationView {
             ZStack(alignment: .center) {
                 pageContent
+                // Show loading spinner if loading
                 if showLoading {
                     ProgressView() {
                         Text("Loading")
@@ -63,11 +68,13 @@ struct ContactDetailView: View {
                 }
             }
         }
+        // Set the navigation bar title based on whether it's in edit mode or not
         .navigationBarTitle(isEdit ? "Edit Contact" : "New Contact")
         
     }
 }
 
+// This view represents the save button
 struct SaveButtonView: View {
     var disabled: Bool
     var action: () -> Void
@@ -80,7 +87,7 @@ struct SaveButtonView: View {
     }
 }
 
-
+// This view represents the delete button
 struct DeleteButtonView: View {
     var delateAction: () -> Void
     @State private var showDeleteAlert = false

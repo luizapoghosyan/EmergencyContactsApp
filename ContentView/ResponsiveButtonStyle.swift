@@ -1,5 +1,5 @@
 //
-//  ResponsiveButtonStyleModifier.swift
+//  ResponsiveButtonStyle.swift
 //  ContentView
 //
 //  Created by Luiza Poghosyan on 06.07.23.

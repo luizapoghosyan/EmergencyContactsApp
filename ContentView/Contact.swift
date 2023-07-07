@@ -22,11 +22,5 @@ struct Contact: Identifiable {
         self.lastName = lastName
         self.phoneNumber = phoneNumber
     }
-    
-//    init(instance: Contact) {
-//        self.firstName = instance.firstName
-//        self.lastName = instance.lastName
-//        self.phoneNumber = instance.phoneNumber
-//    }
 }
 

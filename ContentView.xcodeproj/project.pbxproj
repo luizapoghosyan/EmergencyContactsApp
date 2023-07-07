@@ -19,7 +19,7 @@
 		25C0E88E2A5372C600E1AB37 /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0E88D2A5372C600E1AB37 /* ContactListView.swift */; };
 		25C0E8902A5372F500E1AB37 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0E88F2A5372F500E1AB37 /* ContactDetailView.swift */; };
 		25C0E8922A562B5B00E1AB37 /* UIKitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0E8912A562B5B00E1AB37 /* UIKitTextField.swift */; };
-		25C0E8942A56D9E500E1AB37 /* ResponsiveButtonStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0E8932A56D9E500E1AB37 /* ResponsiveButtonStyleModifier.swift */; };
+		25C0E8942A56D9E500E1AB37 /* ResponsiveButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0E8932A56D9E500E1AB37 /* ResponsiveButtonStyle.swift */; };
 		25C0E8962A57678900E1AB37 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0E8952A57678900E1AB37 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +56,7 @@
 		25C0E88D2A5372C600E1AB37 /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		25C0E88F2A5372F500E1AB37 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 		25C0E8912A562B5B00E1AB37 /* UIKitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitTextField.swift; sourceTree = "<group>"; };
-		25C0E8932A56D9E500E1AB37 /* ResponsiveButtonStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsiveButtonStyleModifier.swift; sourceTree = "<group>"; };
+		25C0E8932A56D9E500E1AB37 /* ResponsiveButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsiveButtonStyle.swift; sourceTree = "<group>"; };
 		25C0E8952A57678900E1AB37 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,7 +117,7 @@
 				25C0E88D2A5372C600E1AB37 /* ContactListView.swift */,
 				25C0E88F2A5372F500E1AB37 /* ContactDetailView.swift */,
 				25C0E8912A562B5B00E1AB37 /* UIKitTextField.swift */,
-				25C0E8932A56D9E500E1AB37 /* ResponsiveButtonStyleModifier.swift */,
+				25C0E8932A56D9E500E1AB37 /* ResponsiveButtonStyle.swift */,
 			);
 			path = ContentView;
 			sourceTree = "<group>";
@@ -278,7 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25C0E8942A56D9E500E1AB37 /* ResponsiveButtonStyleModifier.swift in Sources */,
+				25C0E8942A56D9E500E1AB37 /* ResponsiveButtonStyle.swift in Sources */,
 				25C0E8902A5372F500E1AB37 /* ContactDetailView.swift in Sources */,
 				25C0E8922A562B5B00E1AB37 /* UIKitTextField.swift in Sources */,
 				25C0E88E2A5372C600E1AB37 /* ContactListView.swift in Sources */,

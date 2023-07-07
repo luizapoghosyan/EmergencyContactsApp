@@ -71,7 +71,7 @@ struct ContactList: View {
         
     }
     
-
+    // This computed property returns a Button view
     private var addContactButton: some View {
         Button(action: {
             showAddContact = true
