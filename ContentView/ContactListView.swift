@@ -79,6 +79,7 @@ struct ContactList: View {
             Label("Add Contact", systemImage: "plus")
         }
         .buttonStyle(ResponsiveButtonStyle(disabled: false))
+        .disabled(false)
     }
     
     // The hideToastAfterDelay function hides the toast message after a specified delay.

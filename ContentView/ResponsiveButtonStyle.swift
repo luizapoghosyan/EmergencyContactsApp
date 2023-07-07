@@ -1,5 +1,5 @@
 //
-//  ResponsiveButtonStyle.swift
+//  ResponsiveButtonStyle.swift.swift
 //  ContentView
 //
 //  Created by Luiza Poghosyan on 06.07.23.
@@ -25,13 +25,11 @@ struct ResponsiveButtonStyle: ButtonStyle {
                 .frame(maxWidth: UIScreen.main.bounds.width * 0.75)
                 .font(.system(size: 18))
                 .padding()
-                
                 .foregroundColor(.white)
                 .overlay(
                     RoundedRectangle(cornerRadius: 25)
                         .stroke(Color.white, lineWidth: 2)
                 )
-                .disabled(disabled)
                 .background(getButtonColor())
                 .cornerRadius(25)
     }

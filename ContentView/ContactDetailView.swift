@@ -84,6 +84,7 @@ struct SaveButtonView: View {
             Text("Save")
         }
         .buttonStyle(ResponsiveButtonStyle(disabled: disabled))
+        .disabled(disabled)
     }
 }
 
